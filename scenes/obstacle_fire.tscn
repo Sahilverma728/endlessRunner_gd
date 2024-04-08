@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8oghf4r6jfsn"]
+
+[ext_resource type="Texture2D" uid="uid://wavefxl6t7rc" path="res://assets/obstacle/#1 - Transparent Icons.png" id="1_xmqpj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mngee"]
+atlas = ExtResource("1_xmqpj")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oqol6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mngee")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="obstacle_fire" type="Area2D"]
+position = Vector2(561, 318)
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_oqol6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D"]
+position = Vector2(0, -0.666667)
+polygon = PackedVector2Array(-1, 13.6667, -10.6667, 13.3333, -12, 9, -9, 6, -10, 2.66666, -10, -2, -9, -5, -8, -8.33334, -4, -11, -4, -9, -3, -8, -0.333328, -5.66666, 1, -7.66666, 0.333344, -9.33334, 0.666672, -12, 6, -6, 5, -3, 5, 1, 6.66667, -3, 9.33334, -1.33334, 11, 2, 10, 5, 7, 8.33334, 9.33334, 10.6667, 7.33334, 13.3333, 4.66667, 13.6667)

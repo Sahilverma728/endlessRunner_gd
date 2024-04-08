@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://hcwl188aw845"]
+
+[ext_resource type="Texture2D" uid="uid://ec7omg4sb86u" path="res://assets/ground.png" id="1_mswnl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fq7wq"]
+size = Vector2(2304, 88)
+
+[node name="st_body_floor" type="StaticBody2D"]
+
+[node name="spr_floor" type="Sprite2D" parent="."]
+texture = ExtResource("1_mswnl")
+centered = false
+offset = Vector2(0, 552)
+
+[node name="coll_floor" type="CollisionShape2D" parent="."]
+position = Vector2(1152, 604)
+shape = SubResource("RectangleShape2D_fq7wq")

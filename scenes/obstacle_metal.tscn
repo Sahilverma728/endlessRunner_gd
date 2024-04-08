@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1ykirle6glgg"]
+
+[ext_resource type="Texture2D" uid="uid://cty7m7f7xf87k" path="res://assets/obstacle/long_metal_spike_04.png" id="1_vvqtl"]
+
+[node name="obstacle_metal" type="Area2D"]
+position = Vector2(586, 310)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vvqtl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 14.4)
+scale = Vector2(1, 0.844828)
+polygon = PackedVector2Array(2, -57.4, 4, -55.4, 4, -52.1, 7, -44.2, 7, -39.2, 9, -35.2, 9, -30, 17, 4.9, 17, 10.7, 20, 20.9, 20, 27, 20.8, 31, 23.2, 31, 28, 33.4, 28, 34.6, 34, 40.6, 34, 42.7, 36, 45.7, 36, 53, 34.5, 53, 32.5, 56, 29.2, 56, 24.5, 58, -23, 58, -33, 55.8, -33, 54.5, -36, 52.5, -36, 46.8, -32.7, 39, -31.5, 39, -25.5, 32, -23, 32, -21, 31.3, -21, 26.9, -6.8, -45, -5.9, -45, -4.9, -53, -4, -53, -4, -56, -2.6, -56, -2, -57.2, -2, -58, 2, -58)

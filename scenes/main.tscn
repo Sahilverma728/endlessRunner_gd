@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://bisxr3xxqnjcf"]
+
+[ext_resource type="PackedScene" uid="uid://lm6q03ud0f3f" path="res://scenes/plx_bg.tscn" id="1_5ddkc"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_rmatv"]
+[ext_resource type="PackedScene" uid="uid://hcwl188aw845" path="res://scenes/st_body_floor.tscn" id="2_6mati"]
+[ext_resource type="PackedScene" uid="uid://cbiyxoqpoe6f4" path="res://scenes/ch_player.tscn" id="3_4ouqq"]
+[ext_resource type="PackedScene" uid="uid://lio6lvamnv21" path="res://scenes/hud_ui.tscn" id="5_7n8rv"]
+[ext_resource type="PackedScene" uid="uid://c1u4xc1m4p82p" path="res://scenes/game_over_scene.tscn" id="6_io0ie"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_rmatv")
+
+[node name="plx_bg" parent="." instance=ExtResource("1_5ddkc")]
+scale = Vector2(4.238, 4.238)
+transform = Transform2D(4.238, 0, 0, 4.238, 0, 0)
+
+[node name="st_body_floor" parent="." instance=ExtResource("2_6mati")]
+position = Vector2(0, 93)
+
+[node name="Ch_player" parent="." instance=ExtResource("3_4ouqq")]
+position = Vector2(118, 584)
+scale = Vector2(0.595, 0.595)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="HUD UI" parent="." instance=ExtResource("5_7n8rv")]
+
+[node name="game_over_scene" parent="." instance=ExtResource("6_io0ie")]
